@@ -1,1 +1,1 @@
-# JavascriptCourse
+# Javascript Course
