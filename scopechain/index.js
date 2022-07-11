@@ -1,8 +1,46 @@
 "use strict";
 console.log("Start");
 
-// const s = {
-//   f: 5,
+// const obj1 = {
+//   name: "mehdi",
+//   Age: 38,
+// };
+
+// const obj2 = {
+//   name: "Ali",
+//   Age: 35,
+// };
+
+// obj1.Family = "Nikbakht";
+// obj1.Color = "Red";
+
+// obj2.Color = "Yellow";
+// obj2.Family = "baran";
+
+// function Test() {
+//   var myvar4 = "ahmad";
+//   console.log("Test");
+// }
+// Test();
+// var myvar1 = "Ali";
+// let myvar2 = "mehdi";
+// const myvar3 = "Hossein Environment";
+// let myvar;
+// if (myvar === undefined) {
+//   console.log("Test");
+// }
+// console.log(myvar);
+// myvar = 80;
+// console.log(myvar);
+
+// function check() {
+//   var fo = 10;
+//     if (fo == 10)
+//       let fo =fo+1
+
+// }
+// check();
+// const s = { //   f: 5,
 //   h: 6,
 // };
 
@@ -11,31 +49,27 @@ console.log("Start");
 
 // s = { f: 0, h: 9 };
 // console.log(s.f);
-function printNumber() {
-  //let number = 58;
-  {
-    let i = 7;
-    console.log(i);
-  }
+// let number = 50;
 
-  console.log(i);
-}
-//global scope
-var i = 9;
-function log() {
-  //function scope
-  //number = 54;
-  let i = 8;
+// function printNumber() {
+//   console.log(number);
+// }
 
-  {
-    //block scope
-    const i = 5;
-    var j = 0;
-    console.log(i);
-  }
-  console.log(i);
-  //printNumber();
-}
+// function log(a, b) {
+//   let number = 54;
+//   printNumber();
+// }
+// log();
 
-log();
-console.log(i);
+// ExecutionContext:
+//   this:
+//   LexicalEnvironment
+//     Record:
+//     Parent:
+//   VariableEnvironment
+//     Record:
+//     Parent:
+
+// console.log(i);
+// // btn= document.getElementById()
+// // btn.onClick=()=>log(2,5)
