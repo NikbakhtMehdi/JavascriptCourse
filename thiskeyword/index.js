@@ -1,20 +1,37 @@
-"use strict";
+//"use strict";
 console.log("Start");
 
-const btn = document.querySelector("#btn");
-//btn.addEventListener("click", myfunc.bind({}, 10, 20));
+// console.log(this);
+// function func1() {
+//   console.log(this);
+// }
 
-const myarr = ["Ali", "Reza", "Mehdi"];
-//Simple for
-//map
-//foreach
-function Book() {
-  this.Name = "Book1";
-  const self = this;
-  myarr.forEach((item) => console.log(`${self.Name}:${item}`));
-}
+// func1();
 
-const b1 = new Book();
+// function Person() {
+//   //this={}
+//   this.func1 = function () {
+//     console.log(this);
+//   };
+// }
+
+// const p1 = new Person();
+// //console.log(p1);
+//p1.func1();
+// const btn = document.querySelector("#btn");
+// //btn.addEventListener("click", myfunc.bind({}, 10, 20));
+
+// const myarr = ["Ali", "Reza", "Mehdi"];
+// //Simple for
+// //map
+// //foreach
+// function Book() {
+//   this.Name = "Book1";
+//   const self = this;
+//   myarr.forEach((item) => console.log(`${self.Name}:${item}`));
+// }
+
+// const b1 = new Book();
 
 //objects
 //Methods vs Functions
@@ -59,3 +76,33 @@ const b1 = new Book();
 
 // const per1 = new Person("Mehdi");
 // console.log(per1);
+console.log("---------Literal Object------------");
+const obj2 = {
+  arrfunc: () => {
+    console.log("Arrow Function This: ", this);
+  },
+  regfunc: function () {
+    console.log("Regular Function This:", this);
+  },
+};
+obj2.arrfunc();
+obj2.regfunc();
+console.log("---------Constructor Function---------");
+
+function Person() {
+  this.arrfunc = () => {
+    console.log("Arrow Function This: ", this);
+  };
+  this.regfunc = function () {
+    console.log("Regular Function This:", this);
+  };
+}
+
+const obj3 = new Person();
+obj3.arrfunc();
+obj3.regfunc();
+
+console.log("--------- Function---------");
+const obj4 = Person();
+obj4.arrfunc();
+obj4.regfunc();
