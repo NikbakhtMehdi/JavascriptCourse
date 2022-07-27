@@ -208,6 +208,19 @@ const obj = {};
 console.dir(Person.__proto__);
 console.log(obj.__proto__);
 
+const o = {
+  a: 1,
+  b: 2,
+  // __proto__ sets the [[Prototype]]. It's specified here
+  // as another object literal.
+  __proto__: {
+    b: 3,
+    c: 4,
+  },
+};
+
+console.log(o);
+
 // Person.__proto__.fn1 = function () {
 //   console.log("fn1");
 // };
