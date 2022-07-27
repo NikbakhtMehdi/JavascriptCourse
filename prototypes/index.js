@@ -181,11 +181,11 @@ console.log("Start");
 // // console.log("Person.__proto__:", obj.__proto__);
 // // console.log("obj.prototype : ", obj.prototype);
 // console.log("Object.getPrototypeOf(obj) : ", Object.getPrototypeOf(obj));
-// console.log("-------------------------");
-var obj2 = { name: "obj2", id: "1000", category: "A", level: 3 };
-obj2.printName = function () {
-  console.log("Print obj2");
-};
+// // console.log("-------------------------");
+// var obj2 = { name: "obj2", id: "1000", category: "A", level: 3 };
+// obj2.printName = function () {
+//   console.log("Print obj2");
+// };
 // console.log(obj2);
 // console.log("Object.getPrototypeOf(obj2)", Object.getPrototypeOf(obj2));
 // console.log("-------------------------");
@@ -203,31 +203,52 @@ obj2.printName = function () {
 function Person(name) {
   this.name = name;
 }
+
+const obj = {};
+console.dir(Person.__proto__);
+console.log(obj.__proto__);
+
+// Person.__proto__.fn1 = function () {
+//   console.log("fn1");
+// };
+// Person.prototype.fn2 = function () {
+//   console.log("fn2");
+// };
+// console.log("prototype");
+// console.dir(Person.prototype);
+// console.log("__proto__");
+// console.dir(Person.__proto__);
+// Person.fn1();
+//Person.fn2();
+
+// const p1 = new Person();
+// console.dir(p1);
+
 // console.dir(Person);
 // console.log("Person.prototype :", Person.prototype);
 // console.log("Person.__proto__:", Person.__proto__);
 // console.log("Object.getPrototypeOf(Person):", Object.getPrototypeOf(Person));
 
-Person.prototype.greet = function () {
-  return "Hi, I'm " + this.name + "!";
-};
-let p1 = new Person("John");
-console.log(p1);
-console.log(p1.__proto__);
+// Person.prototype.greet = function () {
+//   return "Hi, I'm " + this.name + "!";
+// };
+// let p1 = new Person("John");
+// console.log(p1);
+// console.log(p1.__proto__);
 
-let greeting = p1.greet();
-console.log(greeting);
+// let greeting = p1.greet();
+// console.log(greeting);
 
-// let s = p1.toString();
-// console.log(s);
+// // let s = p1.toString();
+// // console.log(s);
 
-let p2 = new Person("Jane");
+// let p2 = new Person("Jane");
 
-p1.draw = function () {
-  return "I can draw.";
-};
+// p1.draw = function () {
+//   return "I can draw.";
+// };
 
-p1.draw();
+// p1.draw();
 //p2.draw();
 
 // console.log(p1.__proto__ === Person.prototype); // true
@@ -253,16 +274,16 @@ p1.draw();
 // };
 // obj.m1();
 // console.log(Object.getPrototypeOf(obj));
-const obj3 = Object.create(obj2, {
-  p: {
-    value: 42,
-    writable: false,
-    enumerable: false,
-    configurable: true,
-  },
-});
-let a = "22";
-Object.setPrototypeOf(null, obj2);
-console.log(a.__proto__);
+// const obj3 = Object.create(obj2, {
+//   p: {
+//     value: 42,
+//     writable: false,
+//     enumerable: false,
+//     configurable: true,
+//   },
+// });
+// let a = "22";
+// Object.setPrototypeOf(null, obj2);
+// console.log(a.__proto__);
 
 //obj2.printName();
